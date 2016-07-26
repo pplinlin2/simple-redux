@@ -19,10 +19,5 @@ export default class App extends Component {
     }
 }
 
-const select = (state) => {
-    return {
-        counter: state
-    }
-}
-
+const select = (state) => ({ counter: state })
 export default connect(select)(App);
