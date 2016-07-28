@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from "axios"
 
 export const increase = () => ({ type: 'INCREASE' })
 export const decrease = () => ({ type: 'DECREASE' })

@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import { Nav, Navbar, NavItem } from 'react-bootstrap';
-import { LinkContainer } from 'react-router-bootstrap';
+import React, { Component } from 'react'
+import { Nav, Navbar, NavItem } from 'react-bootstrap'
+import { LinkContainer } from 'react-router-bootstrap'
 
 export default class App extends Component {
     render() {
@@ -28,5 +28,5 @@ export default class App extends Component {
                 {this.props.children}
             </div>
         )
-    };
+    }
 }

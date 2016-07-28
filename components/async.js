@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
-import { connect } from 'react-redux';
-import { Button } from 'react-bootstrap';
+import { connect } from 'react-redux'
+import { Button } from 'react-bootstrap'
 
-import { fetchuser } from '../actions';
+import { fetchuser } from '../actions'
 
 @connect(
     (store) => ({users: store.users}), 
@@ -11,7 +11,7 @@ import { fetchuser } from '../actions';
 )
 export default class App extends Component {
     render() {
-        const { users } = this.props;
+        const { users } = this.props
 
         if (!users.fetched) {
             return <Button onClick={ () => this.props.fetchuser() }>Load users</Button>
@@ -24,5 +24,5 @@ export default class App extends Component {
                 <ul>{mappedUsers}</ul>
             </div>
         )
-    };
+    }
 }

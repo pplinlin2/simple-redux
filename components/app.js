@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
-import { connect } from 'react-redux';
-import { ButtonToolbar, Button } from 'react-bootstrap';
+import { connect } from 'react-redux'
+import { ButtonToolbar, Button } from 'react-bootstrap'
 
-import { increase, decrease } from '../actions';
+import { increase, decrease } from '../actions'
 
 @connect(
     (store) => ({ counter: store.counter }), 
@@ -11,7 +11,7 @@ import { increase, decrease } from '../actions';
 )
 export default class App extends Component {
     render() {
-        const { counter } = this.props;
+        const { counter } = this.props
 
         // counter from the connect(select) and dispatch by default from connect
         return (
@@ -22,6 +22,6 @@ export default class App extends Component {
                     <Button bsStyle="danger" onClick={ () => this.props.decrease() }>Decrease</Button>
                 </ButtonToolbar>
             </div>
-        );
+        )
     }
 }
