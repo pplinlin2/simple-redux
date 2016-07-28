@@ -10,6 +10,7 @@ import reducer from './reducers';
 import App from './components/app';
 import Root from './components/root';
 import Home from './components/home';
+import Async from './components/async'
 
 let middleware = applyMiddleware(promise(), logger())
 let store = createStore(reducer, middleware);
@@ -21,6 +22,7 @@ ReactDOM.render (
                 <IndexRoute components={Home}/>
                 <Route path="/home" components={Home}/>
                 <Route path="/counter" components={App}/>
+                <Route path="/async" components={Async}/>
             </Route>
         </Router>
     </Provider>, 

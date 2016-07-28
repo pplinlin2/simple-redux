@@ -19,6 +19,9 @@ export default class App extends Component {
                             <LinkContainer to="/counter">
                                 <NavItem>Counter</NavItem>
                             </LinkContainer>
+                            <LinkContainer to="/async">
+                                <NavItem>Async</NavItem>
+                            </LinkContainer>
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>
