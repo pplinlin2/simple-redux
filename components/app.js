@@ -8,7 +8,6 @@ import { increase, decrease } from '../actions';
 export default class App extends Component {
     render() {
         const { counter, dispatch } = this.props;
-        console.log(this.props);
 
         // counter from the connect(select) and dispatch by default from connect
         return (

@@ -1,15 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { createStore } from 'redux';
+import { applyMiddleware, createStore } from 'redux';
 import { Provider } from 'react-redux';
 import { Router, Route, browserHistory, IndexRoute } from 'react-router'
+import logger from "redux-logger";
+import promise from "redux-promise-middleware";
 
 import reducer from './reducers';
 import App from './components/app';
 import Root from './components/root';
 import Home from './components/home';
 
-let store = createStore(reducer);
+let middleware = applyMiddleware(promise(), logger())
+let store = createStore(reducer, middleware);
 
 ReactDOM.render (
     <Provider store={store}>
