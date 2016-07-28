@@ -4,7 +4,7 @@ import { ButtonToolbar, Button } from 'react-bootstrap';
 
 import { increase, decrease } from '../actions';
 
-@connect((state) => ({ counter: state }))
+@connect((store) => ({ counter: store.counter }))
 export default class App extends Component {
     render() {
         const { counter, dispatch } = this.props;
