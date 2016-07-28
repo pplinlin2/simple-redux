@@ -4,6 +4,7 @@ import { ButtonToolbar, Button } from 'react-bootstrap';
 
 import { increase, decrease } from '../actions';
 
+@connect((state) => ({ counter: state }))
 export default class App extends Component {
     render() {
         const { counter, dispatch } = this.props;
@@ -21,6 +22,3 @@ export default class App extends Component {
         );
     }
 }
-
-const select = (state) => ({ counter: state })
-export default connect(select)(App);

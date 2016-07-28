@@ -6,7 +6,14 @@ module.exports = {
     },
     module: {
         loaders: [
-            { loader: 'babel-loader' }
+            {
+                loader: 'babel-loader', 
+                exclude: /node_modules/, 
+                query: {
+                    presets: ['react', 'es2015'], 
+                    plugins: ['transform-decorators-legacy'], 
+                }
+            }
         ]
     }
 };
